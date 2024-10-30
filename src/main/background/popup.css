@@ -367,6 +367,18 @@ ul.tab-ui li img {
   padding: 0;
 }
 
+#popular-comment-list::after {
+  display: block;
+  content: "人気コメント算出アルゴリズムの一部にヤフー株式会社の「建設的コメント順位付けモデルAPI」を使用しています";
+  font-size: 11px;
+  padding: 12px 20px;
+  color: #999;
+}
+
+#popular-comment-list:empty::after {
+  display: none;
+}
+
 span.timestamp {
   font-size: 85%;
   color: #999;
