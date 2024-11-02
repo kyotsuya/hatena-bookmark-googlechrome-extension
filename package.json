@@ -1,15 +1,12 @@
 {
   "name": "hatena-bookmark-googlechrome-extension",
   "scripts": {
-    "clean": "rm -rf dist",
-    "_copy:chrome": "cpx \"src/chrome/**/*\" dist --ignore \"**/tests/**\"",
-    "_copy:main": "cpx \"src/main/**/*\" dist --ignore \"**/tests/**\"",
-    "build": "npm run clean && mkdir -p dist && npm run _copy:chrome && npm run _copy:main",
-    "_watch:chrome": "cpx \"src/chrome/**/*\" dist --ignore \"**/tests/**\" --watch",
-    "_watch:main": "cpx \"src/main/**/*\" dist --ignore \"**/tests/**\" --watch",
-    "watch": "npm run build && npm run _watch:chrome & npm run _watch:main"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "devDependencies": {
-    "cpx2": "^8.0.0"
+    "copy-webpack-plugin": "^12.0.2",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
   }
 }
