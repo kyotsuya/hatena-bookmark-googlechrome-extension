@@ -1,14 +1,12 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "default_locale": "ja",
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
-  "version": "3.4.3",
+  "version": "4.0.0",
   "permissions": [
-    "http://*/*",
-    "https://*/*",
     "tabs",
-    "unlimited_storage",
+    "unlimitedStorage",
     "contextMenus"
   ],
   "icons": {
@@ -17,7 +15,7 @@
       "48": "images/favicon48.png",
       "128": "images/favicon128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "images/chrome-b-plus.png",
     "default_title": "Hatena Bookmark",
     "default_popup": "background/popup.html"
@@ -65,16 +63,12 @@
     }
   ],
   "options_page": "background/config.html",
-  "background": {
-    "page": "background/background.html"
-  },
   "commands": {
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+B",
         "mac": "MacCtrl+Shift+B"
       }
     }
-  },
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+  }
 }
